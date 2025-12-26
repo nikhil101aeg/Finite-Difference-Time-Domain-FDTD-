@@ -1,6 +1,6 @@
 # 2D Finite-Difference Time-Domain (FDTD) Electromagnetic Simulator
 
-**IIT Patna | Engineering Physics | CPI: 7.21**  
+**IIT Patna | Engineering Physics**  
 *A from-scratch implementation of Maxwell's equations solver using Yee's algorithm*
 
 ---
@@ -203,15 +203,16 @@ Should remain constant after source turns off: $\Delta W_{\text{total}} \approx 
 ### **Quantitative Validation**
 
 **Wave Speed Verification:**
-$$
+
+
+```math
 v_{\text{measured}} = \frac{\text{Distance traveled}}{\text{Time steps} \times \Delta t} \approx \frac{1}{\sqrt{\mu_0\epsilon_0}}
-$$
+```
 
 **Energy Conservation (Lossless Case):**
-$$
+```math
 \frac{|W_{\text{final}} - W_{\text{initial}}|}{W_{\text{initial}}} < 5\% \quad \text{(After source turns off)}
-$$
-
+```
 **Numerical Stability:**
 - CFL condition strictly enforced: $\Delta t = 0.5 \times \frac{\Delta}{c\sqrt{2}}$
 - No exponential blow-up observed in 1000+ time steps
